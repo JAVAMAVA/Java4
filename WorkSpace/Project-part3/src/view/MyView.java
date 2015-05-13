@@ -1,9 +1,10 @@
 package view;
 
+import observer.Observable;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.Solution;
 
-public class MyView implements View {
+public class MyView extends Observable implements View  {
 
 	@Override
 	public void start() {

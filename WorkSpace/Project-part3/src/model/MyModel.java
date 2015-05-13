@@ -1,9 +1,10 @@
 package model;
 
+import observer.Observable;
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.Solution;
 
-public class MyModel implements Model {
+public class MyModel extends Observable implements Model {
 
 	@Override
 	public void generateMaze(int rows, int cols) {
