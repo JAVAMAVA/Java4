@@ -1,32 +1,38 @@
 package view;
 
-import observer.Observable;
+import java.util.HashMap;
+
 import algorithms.mazeGenerators.Maze;
 import algorithms.search.Solution;
+import observer.Observable;
+import presenter.Presenter;
+import presenter.Presenter.Command;
 
-public class MyView extends Observable implements View  {
 
+public class MyView extends Observable implements View {
+	HashMap<String, Command> comm=new HashMap<String,Command>();
 	@Override
 	public void start() {
-		// TODO Auto-generated method stub
+		notifyObserver(this, "");//I dont know what is this
 		
 	}
 
 	@Override
-	public void setCommands() {
-		// TODO Auto-generated method stub
+	public void setCommands(HashMap<String, Command> comm) {
+		this.comm=comm;
 		
 	}
 
 	@Override
 	public Command getUserCommand() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Command t=new Presenter().new TestMVPCommand();
+		return t;
 	}
 
 	@Override
 	public void displayMaze(Maze m) {
-		// TODO Auto-generated method stub
+		System.out.println("displaying maze");
 		
 	}
 

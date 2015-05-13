@@ -8,13 +8,14 @@ public class MyModel extends Observable implements Model {
 
 	@Override
 	public void generateMaze(int rows, int cols) {
-		// TODO Auto-generated method stub
+		System.out.println("Generating Maze");
+		notifyObserver(this, "");
 		
 	}
 
 	@Override
 	public Maze getMaze() {
-		// TODO Auto-generated method stub
+		System.out.println("getting maze");
 		return null;
 	}
 
