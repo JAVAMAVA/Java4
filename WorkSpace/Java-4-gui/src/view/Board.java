@@ -19,6 +19,7 @@ public class Board extends Composite {
 	Canvas[][] boardGame;
 	Image wallVertical;
 	Image way;
+	Maze m;
 	private Display display;
 	private Shell shell;
 
@@ -35,12 +36,17 @@ public class Board extends Composite {
 		addPaintListener(new PaintListener() {
 			@Override
 			public void paintControl(PaintEvent e) {
+				
+				
+				
 				int x=getSize().x;
 				int y=getSize().y;
 				e.gc.drawImage(way,0,0,way.getImageData().width,way.getImageData().height,0,0,x,y);
 				
 			}
 		});
+		
+		
 	}
 
 		
@@ -50,6 +56,7 @@ public class Board extends Composite {
 	 */
 	public void drawMaze(Maze matrix)
 	{
+		boardGame = new Canvas[]
 		for(int i=0;i<matrix.getRows();i++)
 		{
 			for (int j=0;j<matrix.getCols();j++)
@@ -57,8 +64,15 @@ public class Board extends Composite {
 				
 			}
 		}
+		redraw();
+	}
+	
+	public void createBoardCell(int row, int col){ //creting a maze cell
+		
+		BoardCell newcell; 
 		
 	}
+	
 	public void ChangeWallHorizonal(Image wallHorizontal)
 	{
 		this.wallHorizontal=wallHorizontal;
