@@ -1,5 +1,6 @@
 package view;
 
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.graphics.Color;
@@ -22,11 +23,13 @@ public class Board extends Composite {
 	private Shell shell;
 
 	public Board(Composite parent, int style,Display display,Shell shell) {
-		super(parent, style);
+		super(parent, style | SWT.DOUBLE_BUFFERED);
 		
 		this.display=display;
 		this.shell=shell;
 		way=new Image(display,"Grass.jpg");
+		
+		
 		
 		setBackground(new Color(null, 255, 255, 255));
 		addPaintListener(new PaintListener() {

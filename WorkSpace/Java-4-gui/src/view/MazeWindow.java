@@ -22,7 +22,6 @@ import algorithms.search.Solution;
 
 public class MazeWindow extends BasicWindow implements View{
 	
-	Presenter c;
 	Board gameBoard;
 	public Command lastcommand;
 	private HashMap<String, Command> comm;

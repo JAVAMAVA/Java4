@@ -1,6 +1,5 @@
 package view;
 
-import presenter.Presenter.DisplayMazeCommand;
 import algorithms.mazeGenerators.Maze;
 /**
  * {@link MyMazeDispleyer} implements {@link MazeDispleyer} 
